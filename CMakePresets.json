@@ -1,0 +1,21 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "riscv64",
+      "displayName": "RISC-V 64-bit",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_SYSTEM_NAME": "Generic",
+        "CMAKE_SYSTEM_PROCESSOR": "riscv64",
+        "GDB_ARCH": "riscv:rv64",
+        "CMAKE_TRY_COMPILE_TARGET_TYPE": "STATIC_LIBRARY",
+        "CMAKE_C_COMPILER": "clang",
+        "CMAKE_ASM_COMPILER": "clang",
+        "CMAKE_C_FLAGS": "-target riscv64-none-elf -march=rv64gc -mabi=lp64d -mcmodel=medany",
+        "CMAKE_ASM_FLAGS": "-target riscv64-none-elf -march=rv64gc -mabi=lp64d"
+      }
+    }
+  ]
+}
