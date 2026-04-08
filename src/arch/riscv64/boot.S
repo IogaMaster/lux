@@ -1,4 +1,4 @@
-#include "registers.h"
+#include "arch.h"
 
 .section .text.entry
 .global _start

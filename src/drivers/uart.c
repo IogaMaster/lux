@@ -1,5 +1,5 @@
 #include "uart.h"
-#include <registers.h>
+#include <arch.h>
 
 void uart_putc(char c) {
     volatile char *uart = (volatile char *)UART_BASE;

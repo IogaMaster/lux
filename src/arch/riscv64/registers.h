@@ -1,7 +1,0 @@
-#ifndef REGISTERS_H
-#define REGISTERS_H
-
-#define DRAM_START 0x80000000
-#define UART_BASE 0x10000000
-
-#endif
