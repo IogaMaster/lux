@@ -1,9 +1,11 @@
+#include "registers.h"
+
 .section .text.entry
 .global _start
 
 _start:
     # 1. Setup the stack pointer (64KB above RAM start)
-    li sp, (0x80000000 + 0x10000)
+    li sp, (DRAM_START + 0x10000)
 
     # 2. Clear the BSS section
     la t0, _bss_start
