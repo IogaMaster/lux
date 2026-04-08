@@ -16,6 +16,17 @@ set(
 
 set(TARGET_NAME lux_kernel.elf)
 
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Debug)
+endif()
+
+if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+    list(APPEND COMPILE_OPTIONS -g -O0)
+    add_compile_definitions(DEBUG_BUILD)
+else()
+    list(APPEND COMPILE_OPTIONS -O2)
+endif()
+
 # === MISC ===
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
