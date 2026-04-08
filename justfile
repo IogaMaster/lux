@@ -13,5 +13,10 @@ debug: build
     gef -x build/.gdbinit; \
     pkill -f qemu-system
 
+# Misc tasks
+
+format:
+    find src -iname *.c -o -iname *.h | xargs clang-format -i
+
 clean:
     rm -rf build
