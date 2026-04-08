@@ -12,11 +12,12 @@ set(
     -Wall -Wextra -Werror
     -Wpedantic # Ensure pure ISO C99 compliance
     -ffreestanding
+    -nostdlib -nostdinc
 )
 set(
     LINK_OPTIONS
     -fuse-ld=lld
-    -nostdlib
+    -nostdlib -nostdinc
 )
 
 set(TARGET_NAME lux_kernel.elf)
