@@ -10,7 +10,7 @@ run: build
 debug: build
     cmake --build build --target debug & \
     sleep 1; \
-    gdb -x build/.gdbinit; \
+    gef -x build/.gdbinit; \
     pkill -f qemu-system
 
 clean:

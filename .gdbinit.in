@@ -7,6 +7,14 @@ target remote :1234
 break _start
 break kmain
 
+# Edit ui to work better for baremetal dev
+python
+import gdb
+gdb.execute('gef config context.layout "legend regs stack code source"')
+gdb.execute('gef config context.show_registers_hint 0')
+gdb.execute('gef config context.enable 1')
+end
+
 # --- Clean Exit Logic ---
 define hook-quit
     set confirm off
