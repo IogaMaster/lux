@@ -1,11 +1,16 @@
 cmake_minimum_required(VERSION 3.20)
 project("Lux" LANGUAGES C ASM)
 
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_STANDARD_REQUIRED ON)
+set(CMAKE_C_EXTENSIONS OFF)
+
 # ========= CONFIGURATION =========
 
 set(
     COMPILE_OPTIONS 
     -Wall -Wextra -Werror
+    -Wpedantic # Ensure pure ISO C99 compliance
     -ffreestanding
 )
 set(

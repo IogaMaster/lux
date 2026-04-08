@@ -1,9 +1,9 @@
 #include <drivers/uart.h>
 
-void kmain() {
-  uart_puts("Hello from Lux OS!\n");
+void kmain(void) {
+    uart_puts("Hello from Lux OS!\n");
 
-  while (1) {
-    // Stay alive
-  }
+    while (1) {
+        // Stay alive
+    }
 }
