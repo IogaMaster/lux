@@ -3,7 +3,7 @@
 
 _start:
     # 1. Setup the stack pointer (64KB above RAM start)
-    li sp, 0x80010000
+    li sp, (0x80000000 + 0x10000)
 
     # 2. Clear the BSS section
     la t0, _bss_start
