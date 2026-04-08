@@ -30,6 +30,11 @@ SECTIONS
         _bss_start = .;
         *(.bss .bss.*)
         *(COMMON)
+        
+        . = ALIGN(16);
+        . += 0x4000; // 16KB
+        _stack_top = .;
+
         _bss_end = .;
     }
 
